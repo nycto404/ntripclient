@@ -6,7 +6,7 @@ Ein leichter NTRIP-Client in reinem Python (keine externen Abhängigkeiten).
 Installation
 ------------
 
-Benötigt: Python 3.x
+Benötigt: Python 3.4 oder höher
 
 Benutzung (CLI)
 ---------------
