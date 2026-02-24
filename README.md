@@ -1,36 +1,29 @@
-ntripclient
-============
+# ntripclient
 
-Ein leichter NTRIP-Client in reinem Python (keine externen Abhängigkeiten).
+A lightweight NTRIP client in pure Python (no external dependencies).
 
-Installation
-------------
+## Installation
 
-Benötigt: Python 3.4 oder höher
+Requires: Python 3.x
 
-Benutzung (CLI)
----------------
+## Usage (CLI)
 
-Beispiel: Verbindung via HTTPS zu einem Caster und speichern der RTCM-Daten:
+Example: Connect via HTTPS to a caster and save the RTCM data:
 
 ```bash
 python3 ntripclient_cli.py --host caster.example.com --mountpoint MOUNT --user myuser --password mypass --https --output out.rtcm
 ```
 
-Optionen:
-- `--host` Hostname oder IP des NTRIP-Casters
-- `--port` TCP-Port (Standard 2101)
-- `--mountpoint` Mountpoint-Name
-- `--user` Benutzername (optional)
-- `--password` Passwort (optional)
-- `--https` TLS (SSL) verwenden
-- `--version` NTRIP-Version (1 oder 2), Standard ist 2
+## Options
+--host Hostname or IP of the NTRIP caster
+--port TCP port (default 2101)
+--mountpoint Mountpoint name
+--user Username (optional)
+--password Password (optional)
+--https Use TLS (SSL)
+--version NTRIP version (1 or 2), default is 2
 
-API
----
+## API
+The package provides NTRIPClient:
 
-Das Paket stellt `NTRIPClient` zur Verfügung:
-
-- `NTRIPClient(host, port, mountpoint, username, password, use_https, version)`
-- `stream()` liefert einen Generator mit rohen Datenbytes
-# ntripclient
+NTRIPClient(host, port, mountpoint, username, password, use_https, version)
